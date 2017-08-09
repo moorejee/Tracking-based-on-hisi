@@ -159,13 +159,13 @@ void* SAMPLE_VDEC_SendStream(void* p)
     }
 	fcount = 0; //输出图像序列编号
 	/************tracker parameters**************/
-	bool HOG = true;
+	bool HOG = false;
 	bool FIXEDWINDOW = false;
 	bool MULTISCALE = true;
 	bool SILENT = true;
 	bool LAB = false;
 	KCFTracker tracker(HOG, FIXEDWINDOW, MULTISCALE, LAB);
-	ftarget = fopen("/mnt/hi/vdec/text.txt","w+");
+	// ftarget = fopen("/mnt/hi/vdec/text.txt","w+");
     while (pstSendParam->bRun)
     {
 		gettimeofday(&s1,NULL);
@@ -373,7 +373,7 @@ void* SAMPLE_VDEC_SendStream(void* p)
 			{
 				result = tracker.update(frame);
 				printf("x:%d,y:%d,width:%d,height:%d\n",result.x,result.y,result.width,result.height);
-				fprintf(ftarget,"x:%d,y:%d,width:%d,height:%d\n",result.x,result.y,result.width,result.height);
+				// fprintf(ftarget,"x:%d,y:%d,width:%d,height:%d\n",result.x,result.y,result.width,result.height);
 			}
 
 
@@ -389,7 +389,7 @@ void* SAMPLE_VDEC_SendStream(void* p)
 		timecount += timeuse;
 
     }
-	fclose(ftarget);
+	// fclose(ftarget);
     // free(pYuvBuf);
     // cvReleaseImageHeader(yuvImg);
 	// cvReleaseImageHeader(rgbImg);
