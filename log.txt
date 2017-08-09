@@ -1,0 +1,29 @@
+xstrive@ubuntu:~/hisi/tmp/Hi3520D_SDK_V1.0.3.2/mpp/sample/vdec$ arm-hisiv100nptl-linux-g++ opencvcpp_test.cpp `pkg-config --cflags --libs opencv` -lpthread -lstdc++ -o test1
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_core.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_calib3d.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_flann.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_calib3d.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_imgproc.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_calib3d.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_highgui.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_calib3d.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_features2d.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_calib3d.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_calib3d.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_ml.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_video.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_legacy.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_objdetect.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_photo.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_gpu.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_ocl.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/../lib/gcc/arm-hisiv100-linux-uclibcgnueabi/4.4.1/../../../../arm-hisiv100-linux-uclibcgnueabi/bin/ld: warning: ../../lib/libopencv_nonfree.so, needed by /home/xstrive/hisi/Hi3520D_SDK_V1.0.3.2/opencv/output/lib/libopencv_contrib.so, not found (try using -rpath or -rpath-link)
+g++ 编译sample_vdec1.c 文件：sample_vdec1.o: ELF 64-bit LSB  relocatable, x86-64, version 1 (SYSV), not stripped
+error: /usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h: In function ‘_mm_loadh_pi’:
+
+gcc 编译sample_vdec1.c 文件（正常情况下）：sample_vdec1.o: ELF 32-bit LSB  relocatable, ARM, EABI5 version 1 (SYSV), not stripped
+
+不加getimage函数时，处理时间可以到0.03s，加上目前的函数后只能到0.13s(0801)．
+函数sample_yuv_transform（）消耗了大量时间（0.1s）;
+函数opencv_fun（）消耗了（0.03s）．
+
+sample_vdec.c源代码的播放执行时间是0.03s.
++HI_MPI_VDEC_GetImage()，HI_MPI_SYS_Mmap（）不耗时！
++sample_yuv_transform（）耗时0.1s
++memcpy()耗时<0.01s
++opencv_fun()耗时<0.03s:主要是cvtColor（）占比 90%+!
