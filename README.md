@@ -1,2 +1,3 @@
 # Tracking-based-on-hisi
-I am working on video target tracking with linux platform on hisi3520D board.
+I am working in video target tracking on Hisilicon development board 3520D.
+Welcome discussion.
