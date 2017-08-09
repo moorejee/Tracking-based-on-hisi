@@ -128,7 +128,7 @@ void* SAMPLE_VDEC_SendStream(void* p)
 
     /******************* open the stream file *****************/
     SAMPLE_COMM_SYS_Payload2FilePostfix(pstSendParam->enPayload, sFilePostfix); // sFilePostfix文件后缀名
-    sprintf(sFileName, "stream_chn0%s", sFilePostfix);
+    sprintf(sFileName, "/mnt/hi/vdec/videos/stream_chn0%s", sFilePostfix);
     fp = fopen(sFileName, "r");
     if (HI_NULL == fp)
     {
