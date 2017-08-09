@@ -159,7 +159,7 @@ void* SAMPLE_VDEC_SendStream(void* p)
     }
 	fcount = 0; //输出图像序列编号
 	/************tracker parameters**************/
-	bool HOG = false;
+	bool HOG = true;
 	bool FIXEDWINDOW = false;
 	bool MULTISCALE = true;
 	bool SILENT = true;
@@ -334,22 +334,16 @@ void* SAMPLE_VDEC_SendStream(void* p)
 			ptr = sample_yuv_transform(pstFrameInfo,ptr1,ptr2);//注意：将数据去stride以及转化为yuv420p，可能会影响到SDK中的其他函数的调用(这里是为了opencv处理方便)
 			memcpy(pYuvBuf, *ptr, Imagelen); //memcpy较耗时，可优化（？）
 			memcpy(pYuvBuf + Imagelen, *(ptr+1), Imagelen / 2);
-			//   memcpy(pYuvBuf, ptr1, Imagelen0);
-			//   memcpy(pYuvBuf + Imagelen, ptr2, Imagelen0 / 2);
+			// memcpy(pYuvBuf, ptr1, Imagelen0);
+			// memcpy(pYuvBuf + Imagelen, ptr2, Imagelen0 / 2);
 
 
 			/******************************************
 			Self---function 4: tracker function
 			******************************************/
-			// opencv_fun(pYuvBuf, pstFrameInfo->stVFrame.u32Width, pstFrameInfo->stVFrame.u32Height, fcount);
-			// yuvImg.create(Height * 3/2, Width, CV_8UC1);
-			// memcpy(yuvImg.data, pYuvBuf, Imagelen * 3/2);
-			yuvImg.create(Height, Width, CV_8UC1);
+			yuvImg.create(Height, Width, CV_8UC1);//直接使输入为单通道
 			memcpy(yuvImg.data, pYuvBuf, Imagelen);
 			frame = yuvImg.clone();
-			// cvtColor(yuvImg, frame, CV_YUV2BGR_I420);//得到Mat数据
-			// sprintf(name, "/mnt/hi/vdec/output/%d.jpg", fcount);
-			// imwrite(name,frame);
 			if (frame.rows == 0 || frame.cols == 0)
 			{
 				printf("Waiting for frame!\n");
